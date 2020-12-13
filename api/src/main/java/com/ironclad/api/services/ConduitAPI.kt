@@ -1,9 +1,13 @@
 package com.ironclad.api.services
 
-import com.ironclad.api.models.ArticlesResponse
-import retrofit2.Call
+import com.ironclad.api.models.entities.UserCreds
+import com.ironclad.api.models.requests.SignUpRequest
+import com.ironclad.api.models.responses.ArticlesResponse
+import com.ironclad.api.models.responses.UserResponse
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface ConduitAPI {
@@ -15,5 +19,10 @@ interface ConduitAPI {
         @Query("tag") tag: String? = null
     ): Response<ArticlesResponse>
 
+
+    @POST("users")
+    suspend fun signUpUser(
+        @Body userCreds: SignUpRequest
+    ): Response<UserResponse>
 
 }
