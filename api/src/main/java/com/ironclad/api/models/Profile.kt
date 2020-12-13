@@ -1,4 +1,4 @@
-package com.ironclad.pia.models
+package com.ironclad.api.models
 
 
 import com.squareup.moshi.Json
@@ -7,7 +7,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Profile(
     @Json(name = "bio")
-    val bio: String,
+    val bio: String?,
     @Json(name = "following")
     val following: Boolean,
     @Json(name = "image")

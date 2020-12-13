@@ -1,4 +1,4 @@
-package com.ironclad.pia.models
+package com.ironclad.api.models
 
 
 import com.squareup.moshi.Json
