@@ -9,23 +9,25 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.ironclad.conduit.R
+import com.ironclad.conduit.databinding.FragmentSlideshowBinding
 
 class SlideshowFragment : Fragment() {
 
     private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var binding: FragmentSlideshowBinding
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         slideshowViewModel =
-                ViewModelProvider(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
+            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+        binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+
         slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+            binding.textSlideshow.text = it
         })
-        return root
+        return binding.root
     }
 }
