@@ -5,7 +5,7 @@ buildscript {
         kotlin_version = "1.4.21"
         retrofit_version = "2.9.0"
         moshi_version = "1.11.0"
-        coroutines_version = "1.4.2"
+        coroutines_version = "1.4.2-native-mt"
     }
 
     repositories {
