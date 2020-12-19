@@ -20,7 +20,7 @@ class SlideshowFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         slideshowViewModel =
             ViewModelProvider(this).get(SlideshowViewModel::class.java)
         binding = FragmentSlideshowBinding.inflate(inflater, container, false)
