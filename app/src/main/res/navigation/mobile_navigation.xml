@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_auth"
         android:name="com.ironclad.conduit.ui.auth.AuthFragment"
-        android:label="@string/auth"
+        android:label="@string/menu_auth"
         tools:layout="@layout/fragment_auth" />
 
 
