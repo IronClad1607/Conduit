@@ -10,4 +10,12 @@
         android:name="com.ironclad.conduit.ui.feed.GlobalFeedFragment"
         android:label="@string/menu_feed"
         tools:layout="@layout/fragment_feed" />
+
+    <fragment
+        android:id="@+id/nav_auth"
+        android:name="com.ironclad.conduit.ui.auth.AuthFragment"
+        android:label="@string/auth"
+        tools:layout="@layout/fragment_auth" />
+
+
 </navigation>
