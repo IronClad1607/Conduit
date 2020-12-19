@@ -20,10 +20,9 @@ class GlobalFeedFragment : Fragment() {
     ): View? {
         binding = FragmentFeedBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(FeedViewModel::class.java)
+        viewModel.fetchGlobalFeed()
 
-        binding?.btnFetch?.setOnClickListener {
-            viewModel.fetchGlobalFeed()
-        }
+
         return binding?.root
     }
 
