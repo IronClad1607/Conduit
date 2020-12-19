@@ -44,7 +44,7 @@
             tools:text="This is a sample article body to show in the preview of the list item. Long enough text for multiple lines" />
 
         <TextView
-            android:id="@+id/dateTextView"
+            android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"

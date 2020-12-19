@@ -1,6 +1,7 @@
 package com.ironclad.conduit.ui.feed
 
-import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,7 +38,8 @@ class ArticleFeedAdapter : ListAdapter<Article, ArticleFeedAdapter.ArticleViewHo
             tvAuthor.text = article.author.username
             tvTitle.text = article.title
             tvBodySnippet.text = article.body
-
+            tvDate.text = "December 19, 2020"
+            ivAvatar.background = ColorDrawable(Color.BLUE)
         }
     }
 }
