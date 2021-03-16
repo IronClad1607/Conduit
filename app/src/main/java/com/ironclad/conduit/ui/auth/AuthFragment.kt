@@ -19,20 +19,20 @@ class AuthFragment : Fragment() {
     ): View? {
         binding = FragmentAuthBinding.inflate(inflater, container, false)
 
-        binding?.authTabLayout?.addOnTabSelectedListener((object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
-            }
-
-        }))
+//        binding?.authTabLayout?.addOnTabSelectedListener((object : TabLayout.OnTabSelectedListener {
+//            override fun onTabSelected(tab: TabLayout.Tab?) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onTabUnselected(tab: TabLayout.Tab?) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onTabReselected(tab: TabLayout.Tab?) {
+//                TODO("Not yet implemented")
+//            }
+//
+//        }))
         return binding?.root
     }
 
