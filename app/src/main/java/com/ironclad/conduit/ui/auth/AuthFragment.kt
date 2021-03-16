@@ -23,6 +23,11 @@ class AuthFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAuthBinding.inflate(inflater, container, false)
+        return binding?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         navController =
             binding?.let { Navigation.findNavController(it.root.findViewById(R.id.authFragmentNavHost)) }
 
@@ -46,7 +51,7 @@ class AuthFragment : Fragment() {
             }
 
         }))
-        return binding?.root
+
     }
 
     override fun onDestroyView() {
