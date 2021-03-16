@@ -22,12 +22,14 @@
         android:id="@+id/goToLoginFragment"
         app:destination="@id/loginFragment"
         app:enterAnim="@anim/nav_default_pop_enter_anim"
-        app:exitAnim="@anim/nav_default_pop_exit_anim" />
+        app:exitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@navigation/navigation_auth" />
 
     <action
         android:id="@+id/goToSignupFragment"
         app:destination="@id/signupFragment"
         app:enterAnim="@anim/nav_default_pop_enter_anim"
-        app:exitAnim="@anim/nav_default_pop_exit_anim" />
+        app:exitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@navigation/navigation_auth" />
 
 </navigation>
