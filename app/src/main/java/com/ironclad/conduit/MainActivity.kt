@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
+import com.ironclad.api.models.entities.User
 import com.ironclad.conduit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -48,8 +49,21 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         authViewModel.user.observe({ lifecycle }) {
-            Toast.makeText(this, "Logged in as ${it.username}", Toast.LENGTH_SHORT)
-                .show()
+            updateMenu(it)
+            navController.navigateUp()
+        }
+    }
+
+    private fun updateMenu(user: User?) {
+        when (user) {
+            is User -> {
+                binding.navView.menu.clear()
+                binding.navView.inflateMenu(R.menu.menu_name_user)
+            }
+            else -> {
+                binding.navView.menu.clear()
+                binding.navView.inflateMenu(R.menu.menu_name_guest)
+            }
         }
     }
 
