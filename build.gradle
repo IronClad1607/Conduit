@@ -4,7 +4,7 @@ buildscript {
     ext {
         kotlin_version = "1.5.0"
         retrofit_version = "2.9.0"
-        moshi_version = "1.11.0"
+        moshi_version = "1.12.0"
         coroutines_version = "1.4.3-native-mt"
         nav_version = "2.3.4"
         lifecycle_version = "2.3.1"
